@@ -1,0 +1,16 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_link
+
+  update_frequency: 5.0 #10.0
+  publish_frequency: 5.0 #10.0
+  transform_tolerance: 0.8
+  # track_unknown_space: true
+  rolling_window: false # Whether costmap should roll with robot base frame.
+  
+  static_map: true
+
+#  origin_x: -5.60
+#  origin_y: -6.56
+#  resolution: 0.01
+#  inflation_radius: 0.2

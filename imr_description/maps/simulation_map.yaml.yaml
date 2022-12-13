@@ -1,0 +1,7 @@
+image: /home/mohit/catkin_ws/src/imr/imr_description/maps/simulation_map.yaml.pgm
+resolution: 0.010000
+origin: [-9.280672, -9.039252, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

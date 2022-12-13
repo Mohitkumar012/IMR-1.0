@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<robot name="imr" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find imr_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find imr_description)/urdf/imr.trans" />
+<xacro:include filename="$(find imr_description)/urdf/imr.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.022885965070435485 0.0028013663753327957 0.04241824699835381" rpy="0 0 0"/>
+    <mass value="61.90750329454997"/>
+    <inertia ixx="0.691466" iyy="1.572076" izz="2.136055" ixy="-0.337493" iyz="0.001304" ixz="-0.083077"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="0.0 2.4234088208680315e-07 0.009976818466253645" rpy="0 0 0"/>
+    <mass value="0.6027438485203475"/>
+    <inertia ixx="0.000204" iyy="0.000204" izz="0.000368" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.275 -8e-06 -0.151" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.275 -8e-06 -0.151" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_caster_1">
+  <inertial>
+    <origin xyz="-5.551115123125783e-17 0.0 -0.032390624999999916" rpy="0 0 0"/>
+    <mass value="1.4205025342471604"/>
+    <inertia ixx="0.000818" iyy="0.000818" izz="0.000599" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.28 -0.0 -0.038" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/front_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.28 -0.0 -0.038" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/front_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_caster_1">
+  <inertial>
+    <origin xyz="-1.1102230246251565e-16 0.0 -0.032390624999999916" rpy="0 0 0"/>
+    <mass value="1.4205025342471604"/>
+    <inertia ixx="0.000818" iyy="0.000818" izz="0.000599" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.275 -0.0 -0.038" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/back_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.275 -0.0 -0.038" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/back_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="-3.097572436676371e-14 0.03193436324995916 6.938893903907228e-18" rpy="0 0 0"/>
+    <mass value="6.034176390270744"/>
+    <inertia ixx="0.01093" iyy="0.019323" izz="0.01093" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.25 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.25 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin xyz="7.489546800672808e-15 -0.03193436324995916 1.3877787807814457e-17" rpy="0 0 0"/>
+    <mass value="6.0341763902707495"/>
+    <inertia ixx="0.01093" iyy="0.019323" izz="0.01093" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.25 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.25 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://imr_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="lidar_joint" type="fixed">
+  <origin xyz="0.275 8e-06 0.151" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="front_caster_joint" type="fixed">
+  <origin xyz="0.28 0.0 0.038" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_caster_1"/>
+</joint>
+
+<joint name="back_caster_joint" type="fixed">
+  <origin xyz="-0.275 0.0 0.038" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="back_caster_1"/>
+</joint>
+
+<joint name="right_wheel_joint" type="continuous">
+  <origin xyz="0.0 -0.25 0.04" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="left_wheel_joint" type="continuous">
+  <origin xyz="0.0 0.25 0.04" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+</robot>

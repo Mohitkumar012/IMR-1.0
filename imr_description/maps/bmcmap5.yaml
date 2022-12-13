@@ -1,0 +1,7 @@
+image: bmcmap5.pgm
+resolution: 0.010000
+origin: [-4.292656, -6.405503, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+
