@@ -2,7 +2,7 @@
 
 <launch>
 
-	<node pkg="map_server" name="map_server" type="map_server" args="$(find imr_description)/maps/testmap6.yaml"/>
+	<node pkg="map_server" name="map_server" type="map_server" args="$(find imr_description)/maps/IFSmap1.yaml"/>
 
 
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
@@ -13,13 +13,13 @@
 	<node name="rviz" pkg="rviz" args="-d $(arg rvizconfig)" type="rviz" required="true"/>
 
 	<arg name="cmd_vel_topic" default="/cmd_vel" />
-    <arg name="odom_topic" default="odom" />
-    <arg name="move_forward_only" default="true"/>
+        <arg name="odom_topic" default="odom" />
+        <arg name="move_forward_only" default="true"/>
 
 
 	<!-- move base -->
     
-	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+      <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
       
       <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
       

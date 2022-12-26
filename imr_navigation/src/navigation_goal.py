@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3 
 import rospy
 import actionlib
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
@@ -46,8 +46,8 @@ def move_to_goal(xGoal,yGoal):
 
 if __name__ == '__main__':
    rospy.init_node('map_navigation', anonymous=False)
-   x_goal = 0.5
-   y_goal = 0.5
+   x_goal = 2
+   y_goal = 3
    print ('start go to goal')
    move_to_goal(x_goal,y_goal)
    rospy.spin()

@@ -1,13 +1,16 @@
 <?xml version="1.0" ?>
 <robot name="imr" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<xacro:property name="body_color" value="Gazebo/Silver" />
+<xacro:property name="body_color" value="Gazebo/silver" />
+<xacro:property name="base_link_color" value="Gazebo/metal-material" />
+<xacro:property name="lidar_color" value="Gazebo/Blue" />
+
 
 <gazebo>
   <plugin name="control" filename="libgazebo_ros_control.so"/>
 </gazebo>
 <gazebo reference="base_link">
-  <material>${body_color}</material>
+  <material>${base_link_color}</material>
   <mu1>100.0</mu1>
   <mu2>100.0</mu2>
   <selfCollide>true</selfCollide>
@@ -15,7 +18,7 @@
 </gazebo>
 
 <gazebo reference="lidar_1">
-  <material>${body_color}</material>
+  <material>${lidar_color}</material>
   <mu1>100.0</mu1>
   <mu2>100.0</mu2>
   <selfCollide>true</selfCollide>
@@ -23,15 +26,15 @@
 
 <gazebo reference="front_caster_1">
   <material>${body_color}</material>
-  <mu1>0.01</mu1>
-  <mu2>0.01</mu2>
+  <mu1>0.05</mu1>
+  <mu2>0.05</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="back_caster_1">
   <material>${body_color}</material>
-  <mu1>0.01</mu1>
-  <mu2>0.01</mu2>
+  <mu1>0.05</mu1>
+  <mu2>0.05</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 

@@ -15,7 +15,7 @@
     <geometry>
       <mesh filename="package://imr_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="metal-material"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -36,7 +36,7 @@
     <geometry>
       <mesh filename="package://imr_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="blue"/>
   </visual>
   <collision>
     <origin xyz="-0.275 -8e-06 -0.151" rpy="0 0 0"/>
@@ -49,7 +49,7 @@
 <link name="front_caster_1">
   <inertial>
     <origin xyz="-5.551115123125783e-17 0.0 -0.032390624999999916" rpy="0 0 0"/>
-    <mass value="1.4205025342471604"/>
+    <mass value="2.4205025342471604"/>
     <inertia ixx="0.000818" iyy="0.000818" izz="0.000599" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
@@ -70,7 +70,7 @@
 <link name="back_caster_1">
   <inertial>
     <origin xyz="-1.1102230246251565e-16 0.0 -0.032390624999999916" rpy="0 0 0"/>
-    <mass value="1.4205025342471604"/>
+    <mass value="2.4205025342471604"/>
     <inertia ixx="0.000818" iyy="0.000818" izz="0.000599" ixy="0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>

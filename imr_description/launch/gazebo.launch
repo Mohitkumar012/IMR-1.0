@@ -15,7 +15,7 @@
 
     <!-- <arg name="world_name" value="$(find imr_two_description)/worlds/irgf.world"/> -->
 
-    <arg name="world_name" value="$(find mobot_description)/worlds/house1.world"/>
+    <arg name="world_name" value="$(find imr_description)/worlds/puzzle2.world"/>
 
   </include>
 </launch>
